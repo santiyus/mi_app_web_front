@@ -1,0 +1,101 @@
+.fondo-portada {
+  background-image: url('./recursos/img/fondo_portada.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.grid-container {
+  text-align: center;
+  margin-top: 0;
+  margin-left: 6em;
+}
+
+.tittle {
+  color: rgb(201, 201, 197);
+  font-size: 9rem;
+  font-weight: bold;
+  font-family: Verdana;
+}
+
+.buttom {
+  font-family: Verdana;
+  font-weight: bold;
+  margin-top: 1.5em;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1440px) {
+  .grid-container {
+    margin-top: 3em;
+    margin-left: 4em;
+  }
+
+  .tittle {
+    font-size: 7rem;
+  }
+
+  .buttom {
+    margin-top: 1.5em;
+    font-size: 1.5rem;
+  }
+}
+
+
+@media (max-width: 1025px) {
+  .grid-container {
+    margin-top: 7em;
+    margin-left: 4.5em;
+  }
+
+  .tittle {
+    font-size: 5rem;
+  }
+
+  .buttom {
+    margin-top: 1.5em;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 769px) {
+  .grid-container {
+    margin-top: 8em;
+    margin-left: 2.5em;
+  }
+
+  .tittle {
+    font-size: 4rem;
+  }
+}
+
+
+@media (max-width: 530px) {
+  .fondo-portada {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .grid-container {
+    margin-top: 3em;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .tittle {
+    color: rgb(66, 77, 77);
+    font-size: 3.5rem;
+  }
+
+  .buttom {
+    margin-top: .5em;
+    font-size: 1rem;
+  }
+}
