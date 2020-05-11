@@ -12,4 +12,11 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  pulseBtnMenu:boolean = false;
+
+  clickMenuResponsive(pulseBtnMenu:boolean){
+    this.pulseBtnMenu=!pulseBtnMenu;
+    return this.pulseBtnMenu;
+  }
+
 }

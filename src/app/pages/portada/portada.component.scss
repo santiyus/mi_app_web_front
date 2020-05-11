@@ -1,5 +1,9 @@
+@import "../../styles/mixins/breakpoint.scss";
+@import "../../styles/config/fonts.scss";
+@import "../../styles/config/colors.scss";
+
 .fondo-portada {
-  background-image: url('./recursos/img/fondo_portada.jpg');
+  background-image: url('/../../../assets/img/fondo_portada.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -19,7 +23,8 @@
 }
 
 .tittle {
-  color: rgb(201, 201, 197);
+  // color: #c9c9c5;
+  color: $linkedin-color;
   font-size: 9rem;
   font-weight: bold;
   font-family: Verdana;
@@ -90,7 +95,7 @@
   }
 
   .tittle {
-    color: rgb(66, 77, 77);
+    // color: rgb(66, 77, 77);
     font-size: 3.5rem;
   }
 

@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+// /* You can add global styles to this file, and also import other style files */
+
+//Configuracion guias de estilos
+@import "./app/styles/config/colors.scss";
+@import "./app/styles/config/fonts.scss";
+
+//Mixins
+@import "./app/styles/mixins/breakpoint.scss";
+
+//Estilos base
+@import "./app/styles/base/normalize.scss"; //resetea estilos de navegadores
+@import "./app/styles/base/base.scss"; //estilos generales de la web

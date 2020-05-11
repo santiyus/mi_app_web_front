@@ -1,0 +1,97 @@
+@import "../../styles/mixins/breakpoint.scss";
+@import "../../styles/config/fonts.scss";
+@import "../../styles/config/colors.scss";
+
+$width:30px;
+$height:3.5px;
+$menu-color:#fff;
+
+body{
+    margin:0;
+    // width: 100%;
+}
+
+.top-bar{
+    background-color: $text-color-dark1;
+
+    @include tablet{
+        display: none;
+    }
+    
+}
+
+.icon-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+
+    &__bar{
+        background-color: $menu-color;
+        width: $width;
+        height: $height;
+        border-radius: $height/2;
+        position: relative;
+
+        &:after, &:before{
+            content: '';
+            background-color: $menu-color;
+            position: absolute;
+            display: block;
+            width: $width;
+            height: $height;
+            border-radius: $height/2;
+            top:-.5em;
+        }
+
+        &:after{            
+            top:.5em;
+        }
+    }
+}
+
+
+.menu{
+    background-color: $text-color-dark1;
+    list-style: none;
+    padding-left: 0;
+    margin:0;
+    transform: translateX(-100%);
+    transition: transform .3s;
+
+    @include tablet{
+        display: flex;
+        justify-content: space-evenly;
+        transform: translateX(0);
+    }
+    
+    &__show{
+        transform: translateX(100%);
+        transform: translateX(0);
+    }
+
+    &__item{
+        padding: .5em;
+        border-bottom: 1px solid $menu-color;
+
+        @include tablet{
+            border-bottom: none;
+            &:hover{
+                background-color: grey;
+                & a{
+                    color: black;
+                }
+            }
+        }
+        
+        
+    }
+
+    &__link{
+        color: $menu-color;
+        text-decoration: none;
+    }
+
+}
