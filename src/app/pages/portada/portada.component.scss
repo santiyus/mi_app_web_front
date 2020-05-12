@@ -16,91 +16,40 @@
   align-items: center;
 }
 
-.grid-container {
+.title {
+  margin: 1em 0 0 1em;
+  font-family: $main-font;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  margin-top: 0;
-  margin-left: 6em;
-}
 
-.tittle {
-  // color: #c9c9c5;
-  color: $linkedin-color;
-  font-size: 9rem;
-  font-weight: bold;
-  font-family: Verdana;
-}
+  &-item {
+    color: $text-color-ligth1;
+    font-weight: bold;
+    justify-content: center ;
+    margin: 0;
+    font-size: 2em;
 
-.buttom {
-  font-family: Verdana;
-  font-weight: bold;
-  margin-top: 1.5em;
-  font-size: 1.5rem;
-}
-
-@media screen and (max-width: 1440px) {
-  .grid-container {
-    margin-top: 3em;
-    margin-left: 4em;
+    @include tablet{
+      font-size: 4em;    
+    }
+    @include laptor{
+      font-size: 7em;  
+      
+    }
+    @include desktop{
+      font-size: 10em;  
+      
+    }
   }
 
-  .tittle {
-    font-size: 7rem;
+  &-btn {    
+    justify-content: center ; 
+    margin: 0 auto;
+    margin-top: .4em;
+    padding: 3px ;
+    font-size: 8px;
   }
 
-  .buttom {
-    margin-top: 1.5em;
-    font-size: 1.5rem;
-  }
-}
-
-
-@media (max-width: 1025px) {
-  .grid-container {
-    margin-top: 7em;
-    margin-left: 4.5em;
-  }
-
-  .tittle {
-    font-size: 5rem;
-  }
-
-  .buttom {
-    margin-top: 1.5em;
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 769px) {
-  .grid-container {
-    margin-top: 8em;
-    margin-left: 2.5em;
-  }
-
-  .tittle {
-    font-size: 4rem;
-  }
-}
-
-
-@media (max-width: 530px) {
-  .fondo-portada {
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  .grid-container {
-    margin-top: 3em;
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .tittle {
-    // color: rgb(66, 77, 77);
-    font-size: 3.5rem;
-  }
-
-  .buttom {
-    margin-top: .5em;
-    font-size: 1rem;
-  }
 }

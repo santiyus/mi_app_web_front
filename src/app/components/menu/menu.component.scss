@@ -8,7 +8,6 @@ $menu-color:#fff;
 
 body{
     margin:0;
-    // width: 100%;
 }
 
 .top-bar{
@@ -58,6 +57,7 @@ body{
     list-style: none;
     padding-left: 0;
     margin:0;
+    height: 0;
     transform: translateX(-100%);
     transition: transform .3s;
 
@@ -65,9 +65,11 @@ body{
         display: flex;
         justify-content: space-evenly;
         transform: translateX(0);
+        height: 100%;
     }
     
     &__show{
+        height: 100%;
         transform: translateX(100%);
         transform: translateX(0);
     }
