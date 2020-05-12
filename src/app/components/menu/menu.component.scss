@@ -2,9 +2,8 @@
 @import "../../styles/config/fonts.scss";
 @import "../../styles/config/colors.scss";
 
-$width:30px;
-$height:3.5px;
-$menu-color:#fff;
+$width:23px;
+$height:2px;
 
 body{
     margin:0;
@@ -24,11 +23,11 @@ body{
     justify-content: center;
     align-items: center;
     width: 50px;
-    height: 30px;
+    height: 20px;
     cursor: pointer;
 
     &__bar{
-        background-color: $menu-color;
+        background-color: $text-color-ligth1;
         width: $width;
         height: $height;
         border-radius: $height/2;
@@ -36,17 +35,17 @@ body{
 
         &:after, &:before{
             content: '';
-            background-color: $menu-color;
+            background-color: $text-color-ligth1;
             position: absolute;
             display: block;
             width: $width;
             height: $height;
             border-radius: $height/2;
-            top:-.5em;
+            top:-.3em;
         }
 
         &:after{            
-            top:.5em;
+            top:.3em;
         }
     }
 }
@@ -75,24 +74,27 @@ body{
     }
 
     &__item{
-        padding: .5em;
-        border-bottom: 1px solid $menu-color;
+        padding: .2em .2em .5em .2em;
+        border-bottom: 1px solid $text-color-ligth1;
+        font-size: 10px;
 
         @include tablet{
             border-bottom: none;
             &:hover{
-                background-color: grey;
+                
                 & a{
-                    color: black;
+                    color: $text-color-ligth2;
                 }
             }
         }
-        
-        
+
+        &--active{
+            font-weight: bold;
+        }
     }
 
     &__link{
-        color: $menu-color;
+        color: $text-color-ligth1;
         text-decoration: none;
     }
 

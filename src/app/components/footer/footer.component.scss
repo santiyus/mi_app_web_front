@@ -1,3 +1,72 @@
 @import "../../styles/mixins/breakpoint.scss";
 @import "../../styles/config/fonts.scss";
 @import "../../styles/config/colors.scss";
+
+footer {
+  background-color: $text-color-dark1;
+  display: flex;
+  flex-direction: column;
+  color: $text-color-ligth1;
+  font-size: 7px;
+  width: 80% auto;
+}
+
+.footer {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 8px;
+
+  &__line {
+    margin: 1em 0;
+    border-top-color: $text-color-ligth2;
+    opacity: 0.5;
+  }
+
+  &__texts p{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 6px;
+  }
+  
+  &__icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__circle {
+     margin: 12px 0 5px;
+
+    & a{
+        background-color: $background-color-ligth2;
+        color: $text-color-ligth2;
+        margin-right: 10px;
+        padding: .4rem;
+        border-radius: 100%;
+        width: 25px;
+        text-align: center;
+        
+    }
+
+    &>.icon-linkedin:hover {
+      color: #fff;
+      background-color: #007bb6;
+      border-radius: 100%;
+    }
+
+    &>.icon-email:hover {
+      color: #fff;
+      background-color: #D54B3D;
+      border-radius: 100%;
+    }
+
+    &>.icon-github:hover {
+      color: #fff;
+      background-color: rgb(118, 119, 119);
+      border-radius: 100%;
+    }
+
+  }
+
+
+}

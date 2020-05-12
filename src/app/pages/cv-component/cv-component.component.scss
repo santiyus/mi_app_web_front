@@ -1,3 +1,10 @@
 @import "../../styles/mixins/breakpoint.scss";
 @import "../../styles/config/fonts.scss";
 @import "../../styles/config/colors.scss";
+
+.cv-component{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between ;
+    height: 100vh;
+}
