@@ -81,7 +81,7 @@ body {
 
     @include tablet {
       border-bottom: none;
-      font-size: 20px;
+      font-size: 18px;
 
       &:hover {
 
@@ -107,6 +107,7 @@ body {
   }
 
   &__link {
+    display: flex;
     color: $text-color-ligth1;
     text-decoration: none;
   }

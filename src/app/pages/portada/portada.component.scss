@@ -17,7 +17,7 @@
 }
 
 .title {
-  margin: 1em 0 0 1em;
+  margin: 1em 0 0 .5em;
   font-family: $main-font;
   display: flex;
   flex-direction: column;
@@ -33,16 +33,16 @@
 
     @include tablet{
       margin: 0 0 0 .2em;
-      font-size: 4.2em;    
+      font-size: 3.6em;    
     }
     @include laptor{
-      margin: 0 0 0 .1em;
-      font-size: 8em;  
+      margin: 0 0 0 .21em;
+      font-size: 7em;  
       
     }
     @include desktop{
-      margin: 0 0 0 .8em;
-      font-size: 10em;  
+      margin: 0 0 0 .7em;
+      font-size: 9em;  
       
     }
   }
@@ -60,12 +60,12 @@
     }
 
     @include laptor{
-      margin-left: 10.6em;
+      margin-left: 8em;
       font-size: 25px;
     }
 
     @include desktop{
-      margin-left: 13.4em;
+      margin-left: 11.4em;
       font-size: 28px;
     }
   }
