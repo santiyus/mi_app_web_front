@@ -19,6 +19,7 @@ import { UpdateComponent } from './pages/crud-app/crud-components/update/update.
 import { FooterComponent } from './components/footer/footer.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { LinkedinComponent } from './components/linkedin/linkedin.component';
+import { CarruselComponent } from './components/carrusel/carrusel.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { LinkedinComponent } from './components/linkedin/linkedin.component';
     UpdateComponent,
     FooterComponent,
     MenuComponent,
-    LinkedinComponent
+    LinkedinComponent,
+    CarruselComponent
   ],
   imports: [
     BrowserModule,
