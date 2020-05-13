@@ -29,16 +29,19 @@
     font-weight: bold;
     justify-content: center ;
     margin: 0;
-    font-size: 2em;
+    font-size: 3.5em;
 
     @include tablet{
-      font-size: 4em;    
+      margin: 0 0 0 .5em;
+      font-size: 6em;    
     }
     @include laptor{
-      font-size: 7em;  
+      margin: 0 0 0 .5em;
+      font-size: 8em;  
       
     }
     @include desktop{
+      margin: 0 0 0 .8em;
       font-size: 10em;  
       
     }
@@ -49,7 +52,22 @@
     margin: 0 auto;
     margin-top: .4em;
     padding: 3px ;
-    font-size: 8px;
+    font-size: 15px;
+    
+    @include tablet{
+      margin-left: 9.5em;
+      font-size: 20px;   
+    }
+
+    @include laptor{
+      margin-left: 10.6em;
+      font-size: 25px;
+    }
+
+    @include desktop{
+      margin-left: 13.4em;
+      font-size: 28px;
+    }
   }
 
 }

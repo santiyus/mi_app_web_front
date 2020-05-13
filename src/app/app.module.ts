@@ -20,6 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { LinkedinComponent } from './components/linkedin/linkedin.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
