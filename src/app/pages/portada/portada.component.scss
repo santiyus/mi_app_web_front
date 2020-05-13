@@ -29,11 +29,11 @@
     font-weight: bold;
     justify-content: center ;
     margin: 0;
-    font-size: 3em;
+    font-size: 3.6em;
 
     @include tablet{
       margin: 0 0 0 .2em;
-      font-size: 3.6em;    
+      font-size:3.8em;    
     }
     @include laptor{
       margin: 0 0 0 .21em;
