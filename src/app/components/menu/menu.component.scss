@@ -10,7 +10,8 @@ body {
 }
 
 .top-bar {
-  background-color: $text-color-dark1;
+  // background-color: $text-color-dark1;
+  background-color: $text-color-ligth1;
 
   @include tablet {
     display: none;
@@ -27,7 +28,8 @@ body {
   cursor: pointer;
 
   &__bar {
-    background-color: $text-color-ligth1;
+    // background-color: $text-color-ligth1;
+    background-color: $text-color-dark1;
     width: $width;
     height: $height;
     border-radius: $height/2;
@@ -36,7 +38,8 @@ body {
     &:after,
     &:before {
       content: '';
-      background-color: $text-color-ligth1;
+      // background-color: $text-color-ligth1;
+      background-color: $text-color-dark1;
       position: absolute;
       display: block;
       width: $width;
@@ -53,7 +56,8 @@ body {
 
 
 .menu {
-  background-color: $text-color-dark1;
+  // background-color: $background-color-dark;
+  background-color: $background-color-ligth1;
   list-style: none;
   padding-left: 0;
   margin: 0;
@@ -76,7 +80,7 @@ body {
 
   &__item {
     padding: .2em .2em .5em .2em;
-    border-bottom: 1px solid $text-color-ligth1;
+    border-bottom: 1px solid $text-color-dark1;
     font-size: 18px;
 
     @include tablet {
@@ -86,7 +90,8 @@ body {
       &:hover {
 
         & a {
-          color: $text-color-ligth2;
+          // color: $text-color-ligth2;
+          color: $text-color-dark1;
         }
       }
     }
@@ -108,7 +113,8 @@ body {
 
   &__link {
     display: flex;
-    color: $text-color-ligth1;
+    // color: $text-color-ligth2;
+    color: $text-color-dark1;
     text-decoration: none;
   }
 

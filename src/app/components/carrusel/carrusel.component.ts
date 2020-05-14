@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap'
-import rutas_img from './recursos/rutas_img.json';
 
 @Component({
   selector: 'app-carrusel',
@@ -9,25 +8,22 @@ import rutas_img from './recursos/rutas_img.json';
 })
 export class CarruselComponent implements OnInit {
 
-  imgList = []
+  @Input('imgList') imgList: []
   slider;
+  rutaError;
 
-  constructor(private _config:NgbCarouselConfig) {
-    _config.interval= 3000
+  constructor(private _config: NgbCarouselConfig) {
+    _config.interval = 3000
     _config.pauseOnHover = true
-    _config.showNavigationArrows=true
-   }
+    _config.showNavigationArrows = true
+  }
 
   ngOnInit(): void {
-    this.imgList = rutas_img
+    this.rutaError = [{ "id": "img-error", "ruta": "assets/img/carrusel/error_img.jpg" }]
+    
+    if (typeof this.imgList == "undefined" && this.imgList == null)
+      this.imgList = this.rutaError
   }
-
-  private _crearSlider(): void {
-  }
-
-
-
-
 
 }
 

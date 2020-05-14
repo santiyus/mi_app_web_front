@@ -7,23 +7,23 @@
 }
 
 .slider-component .slider .picsum-img-wrapper img {
-  width: 50%;
-  min-height: 150px !important;
-  max-height: 150px !important;
+  width: 100%;
+  min-height: 230px !important;
+  max-height: 230px !important;
 
   @include tablet {
-    min-height: 200px !important;
-    max-height: 200px !important;
+    min-height: 340px !important;
+    max-height: 340px !important;
   }
 
   @include laptor {
-    min-height: 300px !important;
-    max-height: 300px !important;
+    min-height: 450px !important;
+    max-height: 450px !important;
   }
 
   @include desktop {
-    min-height: 400px !important;
-    max-height: 400px !important;
+    min-height: 600px !important;
+    max-height: 600px !important;
 
   }
 }

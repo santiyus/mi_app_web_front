@@ -3,9 +3,10 @@
     --secondary-color: #52d3aa;
     --danger-color: #ff3c32;
 
-    --background-color-ligth1: #222;
-    --background-color-ligth2:  #222222;
-    // --background-color-ligth1: #E1E1E1;
+    --fondo-comun: #FBFBF1;
+
+    --background-color-dark1: #222;
+    --background-color-dark2:  #222222;
     --background-color-ligth1:  #F0F0F0;
     --background-color-ligth2:  #E1E1E1;
 
@@ -23,6 +24,8 @@
   $primary-color: var(--primary-color);
   $secondary-color: var(--secondary-color);
   $danger-color: var(--danger-color);
+
+  $fondo-comun: var(--fondo-comun);
   
   $background-color-ligth1: var(--background-color-ligth1);
   $background-color-ligth2: var(--background-color-ligth2);
