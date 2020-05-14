@@ -6,31 +6,32 @@
     </div>
   </header>
   <hr class="inicio__line">
-  <section class="box-inicio-carrusel">
+
+  <section>
     <div class="inicio-content">
       <div class="inicio-content__item">
-        <img src="" class="inicio_content__img" alt="">
-        <h2 class="inicio_content__titulo"></h2>
-        <p class="inicio_content__text"></p>
-        <a [routerLink]="['/sobre_mi']" class="inicio_content__link">Descubre más</a>
+        <img src="{{text.rutasImg.sobreMi.ruta}}" alt="">
+        <h2>{{text.textos.sobre_mi}}</h2>
+        <p>{{text.textos.sobre_mi_text}}</p>
+        <a [routerLink]="['/sobre_mi']">{{text.textos.descubre_mas}}</a>
       </div>
       <div class="inicio-content__item">
-        <img src="" class="inicio_content__img" alt="">
-        <h2 class="inicio_content__titulo"></h2>
-        <p class="inicio_content__text"></p>
-        <a [routerLink]="['/cv']" class="inicio_content__link">Descubre más</a>
+        <img src="{{text.rutasImg.cv.ruta}}" alt="">
+        <h2>{{text.textos.curriculum}}</h2>
+        <p>{{text.textos.cv_text}}</p>
+        <a [routerLink]="['/cv']">{{text.textos.descubre_mas}}</a>
       </div>
       <div class="inicio-content__item">
-        <img src="" class="inicio_content__img" alt="">
-        <h2 class="inicio_content__titulo"></h2>
-        <p class="inicio_content__text"></p>
-        <a [routerLink]="['/app']" class="inicio_content__link">Descubre más</a>
+        <img src="{{text.rutasImg.app.ruta}}" alt="">
+          <h2>{{text.textos.app_prueba}}</h2>
+          <p>{{text.textos.app_text}}</p>
+          <a [routerLink]="['/app']">{{text.textos.descubre_mas}}</a>
       </div>
       <div class="inicio-content__item">
-        <img src="" class="inicio_content__img" alt="">
-        <h2 class="inicio_content__titulo"></h2>
-        <p class="inicio_content__text"></p>
-        <a [routerLink]="['/contacto']" class="inicio_content__link">Descubre más</a>
+        <img src="{{text.rutasImg.contacto.ruta}}" alt="">
+        <h2>{{text.textos.contacto}}</h2>
+        <p>{{text.textos.contacto_text}}</p>
+        <a [routerLink]="['/contacto']">{{text.textos.descubre_mas}}</a>
       </div>
     </div>
   </section>

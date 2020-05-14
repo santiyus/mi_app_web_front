@@ -1,0 +1,12 @@
+@import "./styles/mixins/breakpoint.scss";
+@import "./styles/config/fonts.scss";
+@import "./styles/config/colors.scss";
+
+.box-central {
+    background-color: $fondo-comun;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}

@@ -7,13 +7,14 @@
 
     --background-color-dark1: #222;
     --background-color-dark2:  #222222;
-    --background-color-ligth1:  #F0F0F0;
+    --background-color-ligth1:  #F2ECEE;
     --background-color-ligth2:  #E1E1E1;
 
     --text-color-ligth1:  #bdbdbd;
     --text-color-ligth2: #C5C5C5;
     --text-color-dark1: #222;
     --text-color-dark2: #222;
+    --text-color-descubre-mas: #636363;
 
     
     --linkedin-color: #007bb6;
@@ -36,6 +37,7 @@
   $text-color-ligth2: var(--text-color-ligth2);
   $text-color-dark1: var(--text-color-dark1);
   $text-color-dark2: var(--text-color-dark2);
+  $text-color-descubre-mas: var(--text-color-descubre-mas);
   
   $linkedin-color: var(--linkedin-color);
   $email-color: var(--email-color);

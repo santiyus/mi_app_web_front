@@ -1,7 +1,17 @@
-
 [
-    {"id":"img-lavuelta","subTituloo": "Final de etapa de la vuelta en Becerril","ruta": "assets/img/carrusel-inicio/lavuelta.jpg"},
-    {"id":"img-sanfermin","subTituloo": "Visita a San Fermín","ruta": "assets/img/carrusel-inicio/sanfermin.jpg"},
-    {"id":"img-bernabeu","subTituloo": "Tour del Bernabeu","ruta": "assets/img/carrusel-inicio/bernabeu.jpg"}
+    {
+        "id": "img-lavuelta",
+        "subTituloo": "Final de etapa de la vuelta en Becerril",
+        "ruta": "assets/img/carrusel-inicio/lavuelta.jpg"
+    },
+    {
+        "id": "img-sanfermin",
+        "subTituloo": "Visita a San Fermín",
+        "ruta": "assets/img/carrusel-inicio/sanfermin.jpg"
+    },
+    {
+        "id": "img-bernabeu",
+        "subTituloo": "Tour del Bernabeu",
+        "ruta": "assets/img/carrusel-inicio/bernabeu.jpg"
+    }
 ]
-
