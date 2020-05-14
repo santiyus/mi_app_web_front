@@ -4,9 +4,6 @@
 
 .box-central {
     background-color: $fondo-comun;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     min-height: 100vh;
     box-sizing: border-box;
 }

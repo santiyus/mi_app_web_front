@@ -3,8 +3,18 @@
 @import "../../styles/config/colors.scss";
 
 
-.box-inicio-carrusel {
-  margin: 0 0 1em;
+.box-inicio {
+  // background-color: $fondo-comun;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // min-height: 100vh;
+  // box-sizing: border-box;
+
+  &-carrusel {
+    margin: 0 0 1em;
+  }
+
 }
 
 .inicio__line {
@@ -60,7 +70,7 @@
 
     @include laptor {
       font-size: 25px;
-    }
+  }
 
 
   }
@@ -70,7 +80,7 @@
 
     @include laptor {
       font-size: 20px;
-    }
+  }
 
   }
 
@@ -81,7 +91,7 @@
 
     @include laptor {
       font-size: 20px;
-    }
+  }
   }
 
   & a:hover {
