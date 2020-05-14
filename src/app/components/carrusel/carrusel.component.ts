@@ -19,7 +19,7 @@ export class CarruselComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.rutaError = [{ "id": "img-error", "ruta": "assets/img/carrusel/error_img.jpg" }]
+    this.rutaError = [{ "id": "img-error", "ruta": "assets/img/error_img.jpg" }]
     
     if (typeof this.imgList == "undefined" && this.imgList == null)
       this.imgList = this.rutaError

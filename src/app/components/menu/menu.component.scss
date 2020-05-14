@@ -11,7 +11,7 @@ body {
 
 .top-bar {
   // background-color: $text-color-dark1;
-  background-color: $text-color-ligth1;
+  background-color: $background-color-ligth1;
 
   @include tablet {
     display: none;
