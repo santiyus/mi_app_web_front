@@ -11,3 +11,5 @@
 //Estilos base
 @import "./app/styles/base/normalize.scss"; //resetea estilos de navegadores
 @import "./app/styles/base/base.scss"; //estilos generales de la web
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

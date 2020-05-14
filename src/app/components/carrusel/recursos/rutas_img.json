@@ -1,0 +1,8 @@
+
+[
+    {"id":"img-cubos","ruta": "assets/img/carrusel/cubos.jpg"},
+    {"id":"img-light","ruta": "assets/img/carrusel/light.jpg"},
+    {"id":"img-road","ruta": "assets/img/carrusel/road.jpg"},
+    {"id":"img-skills","ruta": "assets/img/carrusel/skills.jpg"}
+]
+

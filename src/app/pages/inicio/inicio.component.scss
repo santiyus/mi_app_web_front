@@ -2,9 +2,36 @@
 @import "../../styles/config/fonts.scss";
 @import "../../styles/config/colors.scss";
 
-.inicio{
+
+.box-inicio {
+  background-color: $background-color-ligth1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  &-content {
+    width: 80%;
+    margin:auto;
+    // background-color: $background-color-ligth2;
     display: flex;
     flex-direction: column;
     justify-content: space-between ;
-    height: 100vh;
+  }
+
+  &-carrusel {
+    margin:1em 0;
+  }
+  
+  &-footer {
+  }
+}
+
+.inicio__line {
+  width: 80%;
+  margin: auto;
+  border-top-color: $text-color-dark1;
+  border-width: 2px;
+  opacity: 0.5;
 }

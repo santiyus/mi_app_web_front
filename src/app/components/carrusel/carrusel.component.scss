@@ -1,0 +1,29 @@
+@import "../../styles/mixins/breakpoint.scss";
+@import "../../styles/config/fonts.scss";
+@import "../../styles/config/colors.scss";
+
+.slider-component .slider .picsum-img-wrapper {
+  text-align: center !important;
+}
+
+.slider-component .slider .picsum-img-wrapper img {
+  width: 50%;
+  min-height: 150px !important;
+  max-height: 150px !important;
+
+  @include tablet {
+    min-height: 200px !important;
+    max-height: 200px !important;
+  }
+
+  @include laptor {
+    min-height: 300px !important;
+    max-height: 300px !important;
+  }
+
+  @include desktop {
+    min-height: 400px !important;
+    max-height: 400px !important;
+
+  }
+}
