@@ -1,0 +1,16 @@
+{
+    "textos": {
+        "titulo": "Conociendo a Santiago Simarro",
+        "parrafo1": "Hola!! Soy Santiago Simarro, tengo 25 años y os voy a contar un poco sobre mí. Soy de Colmenar Viejo, un pueblo del noroeste de Madrid, en él es donde crecí y vivo, también es donde comencé mi formación académica hasta que terminé bachillerato.",
+        "parrafo2": "Me considero una persona muy activa, la cual siempre estoy haciendo cosas y no paro durante todo el día. Después de trabajar siempre me gusta dedicarle tiempo a mis hobbies, que son entrenar a equipos de fútbol y hacer deporte, además de estar las personas que me rodean. Desde pequeñito me ha encantado practicar deporte, además de seguirlo por la tele. ",
+        "parrafo3": "También me considero una persona que se desenvuelve muy bien con la gestión y organización de grupos, tener responsabilidades dentro de ellos no es algo que me haga retroceder, sino todo lo contrario, me motiva y me gusta ejercer como líder.",
+        "parrafo4": "Actualmente estoy trabajando como desarrollador de software, y llevo ejerciendo esta profesión desde el 2017 que terminara mis estudios de Grado Superior de Desarrollo de Aplicaciones Multiplataforma. También sigo ejerciendo de entrenador de fútbol desde que empezara mi andadura, por aquel entonces, el año 2013.",
+        "parrafo5": "Para concluir, cuando no estoy ni trabajando ni entrenando, me gusta dedicar el resto del tiempo a mi familia, amigos y hacer deporte. Mis objetivos, a largo plazo es seguir creciendo como persona y aprendiendo profesionalmente, para que el día de mañana pueda seguir estando rodeado de las personas que tengo a mi alrededor y también para ir adquiriendo más responsabilidades a nivel profesional."
+    },
+    "rutasImg": {
+        "logo": {
+            "id": "img-logo",
+            "ruta": "favicon.png"
+        }
+    }
+}

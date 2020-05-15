@@ -1,18 +1,22 @@
 [
     {
-        "id": "img-cubos",
-        "ruta": "assets/img/carrusel-inicio/cubos.jpg"
+        "id": "img-triatlon-meta",
+        "ruta": "assets/img/sobremi/triatlon-meta.jpg"
     },
     {
-        "id": "img-light",
-        "ruta": "assets/img/carrusel-inicio/light.jpg"
+        "id": "img-mister-indicaciones",
+        "ruta": "assets/img/sobremi/mister-indicaciones.jpg"
     },
     {
-        "id": "img-road",
-        "ruta": "assets/img/carrusel-inicio/road.jpg"
+        "id": "img-triatlon-bici",
+        "ruta": "assets/img/sobremi/triatlon-bici.jpg"
     },
     {
-        "id": "img-skills",
-        "ruta": "assets/img/carrusel-inicio/skills.jpg"
+        "id": "img-mister-centro",
+        "ruta": "assets/img/sobremi/mister-centro.jpg"
+    },
+    {
+        "id": "img-bernabeu-e",
+        "ruta": "assets/img/sobremi/bernabeu-e.jpg"
     }
 ]

@@ -15,6 +15,7 @@ export class SobreMiComponent implements OnInit {
 
   ngOnInit(): void {
     this.list_imagenes = rutas_img
+    this.text = textos
   }
 
 }

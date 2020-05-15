@@ -23,70 +23,83 @@ footer {
     opacity: 0.5;
   }
 
-  &__texts p{
+  &__texts p {
     display: flex;
     justify-content: center;
     margin: 0;
     font-size: 14px;
     text-align: center;
 
-    @include laptor{
+    @include laptor {
       font-size: 18px;
     }
 
-    @include desktop{
+    @include desktop {
       font-size: 22px;
     }
   }
-  
+
   &__icons {
     display: flex;
     justify-content: center;
   }
 
   &__circle {
-     margin: 2em 0 1.7em;    
- 
-     @include laptor{
-      margin: 2em 0 2em; 
-     }
- 
-     @include desktop{
-      margin: 2.5em 0 2em; 
-     }
+    margin: .7em 0 1em;
 
-    & a{
-        background-color: $background-color-ligth2;
-        color:  $text-color-dark1;
-        margin-right: 10px;
-        padding: .5rem;
+    @include laptor {
+      margin: .5 0 1em;
+    }
+
+    @include desktop {
+      margin: 0 0 0.8em;
+    }
+
+    & a {
+      display: flex;
+      align-items: center;
+      background-color: $background-color-ligth2;
+      color: $text-color-dark1;
+      margin: 0 6px;
+      padding: .5rem;
+      border-radius: 100%;
+      font-size: 20px;
+      text-align: center;
+
+      @include desktop {
+        padding: 1rem;
+        font-size: 22px;
+      }
+    }
+
+    @include desktop {
+      padding: 1rem;
+      font-size: 22px;
+    }
+
+    @include laptor {
+      & .icon-linkedin:hover {
+        color: #fff;
+        background-color: #007bb6;
         border-radius: 100%;
-        font-size: 20px;
-        text-align: center;
+      }
 
-        @include desktop{
-          padding: 1rem;
-          font-size: 22px;
-        }
+      &>.icon-email:hover {
+        color: #fff;
+        background-color: #D54B3D;
+        border-radius: 100%;
+
+      }
+
+      &>.icon-github:hover {
+        color: #fff;
+        background-color: rgb(118, 119, 119);
+        border-radius: 100%;
+
+      }
     }
 
-    &>.icon-linkedin:hover {
-      color: #fff;
-      background-color: #007bb6;
-      border-radius: 100%;
-    }
-
-    &>.icon-email:hover {
-      color: #fff;
-      background-color: #D54B3D;
-      border-radius: 100%;
-    }
-
-    &>.icon-github:hover {
-      color: #fff;
-      background-color: rgb(118, 119, 119);
-      border-radius: 100%;
-    }
+    // @include desktop {}
 
   }
 

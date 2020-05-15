@@ -8,7 +8,7 @@
   // display: flex;
   // flex-direction: column;
   // justify-content: center;
-  // min-height: 100vh;
+  min-height: 100vh;
   // box-sizing: border-box;
 
   &-carrusel {
@@ -27,7 +27,7 @@
 
 
 .inicio-content {
-  width: 70%;
+  width: 90%;
   margin: 3em auto;
   display: flex;
   flex-direction: column;
@@ -70,7 +70,7 @@
 
     @include laptor {
       font-size: 25px;
-  }
+    }
 
 
   }
@@ -80,7 +80,7 @@
 
     @include laptor {
       font-size: 20px;
-  }
+    }
 
   }
 
@@ -91,10 +91,11 @@
 
     @include laptor {
       font-size: 20px;
-  }
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
   }
 
-  & a:hover {
-    font-weight: bold;
-  }
 }
