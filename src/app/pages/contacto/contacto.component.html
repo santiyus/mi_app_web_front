@@ -13,27 +13,23 @@
       <form class="form-correo" [formGroup]="form" (ngSubmit)="onSubmit()">
         <div class="form-correo__item">
           <p>{{text.textos.nombre}}</p>
-          <input type="text" formControlName="nombre">
+          <input type="text" formControlName="nombre" maxlength="30">
           <span class="form-correo__item--spanerror"
             *ngIf="form.get('nombre').hasError('required') && form.get('nombre').touched">{{text.errores.campoRequerido}}</span>
-          <span class="form-correo__item--spanerror"
-            *ngIf="form.get('nombre').hasError('pattern') && form.get('nombre').touched">{{text.errores.max30}}</span>
         </div>
 
         <div class="form-correo__item">
           <p>{{text.textos.email}}</p>
-          <input type="text" formControlName="email">
+          <input type="text" formControlName="email" maxlength="70">
           <span class="form-correo__item--spanerror"
             *ngIf="form.get('email').hasError('required') && form.get('email').touched">{{text.errores.campoRequerido}}</span>
-          <span class="form-correo__item--spanerror"
-            *ngIf="form.get('email').hasError('pattern') && form.get('email').touched">{{text.errores.max70}}</span>
           <span class="form-correo__item--spanerror"
             *ngIf="form.get('email').hasError('email') && form.get('email').touched">{{text.errores.correoError}}</span>
         </div>
 
         <div class="form-correo__item">
           <p>{{text.textos.telefono}}</p>
-          <input type="number" formControlName="telefono">
+          <input type="number" formControlName="telefono" maxlength="9">
           <!-- <span class="form-correo__item--spanerror" *ngIf="form.get('telefono').hasError('required') && form.get('telefono').touched">{{text.errores.campoRequerido}}</span> -->
           <span class="form-correo__item--spanerror"
             *ngIf="form.get('telefono').hasError('pattern') && form.get('telefono').touched">{{text.errores.telefonoError}}</span>
@@ -41,19 +37,15 @@
 
         <div class="form-correo__item">
           <p>{{text.textos.asunto}}</p>
-          <input type="text" formControlName="asunto">
+          <input type="text" formControlName="asunto" maxlength="30">
           <!-- <span class="form-correo__item--spanerror" *ngIf="form.get('asunto').hasError('required') && form.get('asunto').touched">{{text.errores.campoRequerido}}</span> -->
-          <span class="form-correo__item--spanerror"
-            *ngIf="form.get('asunto').hasError('pattern') && form.get('asunto').touched">{{text.errores.max30}}</span>
-        </div>
+       </div>
 
         <div class="form-correo__item">
           <p>{{text.textos.mensaje}}</p>
-          <textarea type="text" formControlName="mensaje" rows="5"></textarea>
+          <textarea type="text" formControlName="mensaje" rows="5" maxlength="400"></textarea>
           <span class="form-correo__item--spanerror"
             *ngIf="form.get('mensaje').hasError('required') && form.get('mensaje').touched">{{text.errores.campoRequerido}}</span>
-          <span class="form-correo__item--spanerror"
-            *ngIf="form.get('mensaje').hasError('pattern') && form.get('mensaje').touched">{{text.errores.max400}}</span>
         </div>
 
         <div class="form-correo__item">

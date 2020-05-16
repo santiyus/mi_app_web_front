@@ -1,18 +1,17 @@
 [
     {
-        "id": "img-cubos",
-        "ruta": "assets/img/inicio/carrusel/cubos.jpg"
+        "id": "img-code",
+        "titulo": "Desarrollador de software",
+        "ruta": "assets/img/inicio/carrusel/code.jpg"
     },
     {
-        "id": "img-light",
-        "ruta": "assets/img/inicio/carrusel/light.jpg"
+        "id": "img-mister-tac",
+        "titulo": "Entrenador de fútbol",
+        "ruta": "assets/img/inicio/carrusel/mister-tac.jpg"
     },
     {
-        "id": "img-road",
-        "ruta": "assets/img/inicio/carrusel/road.jpg"
-    },
-    {
-        "id": "img-skills",
-        "ruta": "assets/img/inicio/carrusel/skills.jpg"
+        "id": "img-triatleta",
+        "titulo": "Triatleta",
+        "ruta": "assets/img/inicio/carrusel/triatleta.jpg"
     }
 ]

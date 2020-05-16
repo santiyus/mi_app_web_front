@@ -1,0 +1,18 @@
+[
+    {
+        "id": "img-cubos",
+        "ruta": "assets/img/inicio/carrusel/bernabeu.jpg"
+    },
+    {
+        "id": "img-light",
+        "ruta": "assets/img/inicio/carrusel/light.jpg"
+    },
+    {
+        "id": "img-road",
+        "ruta": "assets/img/inicio/carrusel/road.jpg"
+    },
+    {
+        "id": "img-skills",
+        "ruta": "assets/img/inicio/carrusel/skills.jpg"
+    }
+]

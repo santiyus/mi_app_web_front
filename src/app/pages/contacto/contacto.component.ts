@@ -10,11 +10,11 @@ import { FormGroup, FormControl, FormBuilder, Validators  } from '@angular/forms
 export class ContactoComponent implements OnInit {
   text;
   form = this.fb.group({
-    nombre: ['', [Validators.required, Validators.pattern('^[\s\S]{0,30}$')]],
-    email: ['', [Validators.required, Validators.email, Validators.pattern('^[\s\S]{0,70}$')]],
+    nombre: ['', Validators.required],
+    email: ['', Validators.required],
     telefono: ['',[Validators.required, Validators.pattern('(6|7)[ -]*([0-9][ -]*){8}')]],
-    asunto: ['',[Validators.required, Validators.pattern('^[\s\S]{0,30}$')]],
-    mensaje: ['', [Validators.required, Validators.pattern('^[\s\S]{0,400}$')]]
+    asunto: ['',Validators.required],
+    mensaje: ['', Validators.required]
   });
 
   constructor(private fb:FormBuilder) { }
@@ -25,6 +25,7 @@ export class ContactoComponent implements OnInit {
 
   onSubmit() {
     console.log('form')
+    console.log(this.form)
     if (this.form.valid) {
       const value = this.form.value;
       console.log(value);
