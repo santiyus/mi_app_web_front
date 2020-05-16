@@ -13,9 +13,9 @@
         <hr class="cv__line">
       </div>
       <div class="cv__habilidades">
-        <ul *ngFor="let i of text.habilidades">
-          <li>{{i}}</li>
-        </ul>
+        <div *ngFor="let i of text.habilidades">
+          <p>{{i}}</p>
+        </div>
       </div>
     </div>
 
@@ -25,9 +25,9 @@
         <hr class="cv__line">
       </div>
       <div class="cv__formacion">
-        <ul *ngFor="let i of text.formacion">
-          <li>{{i.anios}}: <b>{{i.titulo}}</b> - {{i.lugar}}.</li>
-        </ul>
+        <div *ngFor="let i of text.formacion">
+          <p>{{i.anios}}: <b>{{i.titulo}}</b> - {{i.lugar}}.</p>
+        </div>
       </div>
     </div>
 
@@ -36,9 +36,9 @@
         <h4>{{text.experiencia_pro}}</h4>
         <hr class="cv__line">
       </div>
-      <ul class="cv__experiencia" *ngFor="let i of text.experiencia">
-        <li><b>{{i.anio}}</b>: {{i.puesto}} </li>
-      </ul>
+      <div class="cv__experiencia" *ngFor="let i of text.experiencia">
+        <p><b>{{i.anio}}</b>: {{i.puesto}} </p>
+      </div>
     </div>
 
     <div class="cv__boxbtn">

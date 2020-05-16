@@ -40,7 +40,7 @@
     // width: 90%;
     border: 1px solid $text-color-ligth1;
     margin-bottom: 2em;
-    padding: .5em .5em .5em 0;
+    padding: 1em;
     width: 100%;
 
     @include desktop {
@@ -55,7 +55,7 @@
   }
 
   &__habilidades {
-    text-align: justify;
+    // text-align: justify;
 
     @include laptor {
       width: 80%;
@@ -66,8 +66,8 @@
       align-items: center;
       justify-content: space-between;
 
-      & ul {
-        width: 50%;
+      & div {
+        width: 45%;
         justify-content: space-between;
       }
     }
@@ -77,20 +77,11 @@
   &__formacion {
     text-align: justify;
 
-    @include desktop {
-      display: flex;
-      align-items: center;
-
-      & ul {
-        @include laptor {
-          width: 70%;
-        }
-      }
-    }
+    
   }
 
   &__line {
-    width: 96%;
+    width: 100%;
     margin: auto;
     border-top-color: $text-color-dark1;
     border-width: 2px;
