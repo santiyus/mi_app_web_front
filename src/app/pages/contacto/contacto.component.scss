@@ -2,6 +2,10 @@
 @import "../../styles/config/fonts.scss";
 @import "../../styles/config/colors.scss";
 
+.section-correo {
+  background-color: $fondo-comun;
+}
+
 .contacto {
   display: flex;
   flex-direction: column;
@@ -9,12 +13,13 @@
   height: 100vh;
 }
 
+
 .box-correo {
   width: 90%;
   margin: 1.5em auto;
   display: flex;
   flex-direction: column;
-  
+
   @include laptor {
     width: 80%;
   }
@@ -63,7 +68,7 @@
 
     }
 
-    
+
     &__btn {
       background-color: $text-color-ligth1;
     }

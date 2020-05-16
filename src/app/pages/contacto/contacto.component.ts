@@ -9,11 +9,12 @@ import { FormGroup, FormControl, FormBuilder, Validators  } from '@angular/forms
 })
 export class ContactoComponent implements OnInit {
   text;
+  expRegEmail = '(?(?:^\w+\.?[-+\w]*@\w+(?:[-.]\w+)*\.[a-zA-Z]{2,}$)^.{6,80}$|^\w+\.?[-+\w]*@\w+(?:[-.]\w+)*\.[a-zA-Z]{2,}$)'
   form = this.fb.group({
     nombre: ['', Validators.required],
-    email: ['', Validators.required],
-    telefono: ['',[Validators.required, Validators.pattern('(6|7)[ -]*([0-9][ -]*){8}')]],
-    asunto: ['',Validators.required],
+    email: ['', [Validators.required, Validators.email]],
+    telefono: ['', Validators.pattern('(6|7)[ -]*([0-9][ -]*){8}')],
+    asunto: [''],
     mensaje: ['', Validators.required]
   });
 
@@ -24,8 +25,9 @@ export class ContactoComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('form')
     console.log(this.form)
+    console.log(this.form.get('email'))
+
     if (this.form.valid) {
       const value = this.form.value;
       console.log(value);
