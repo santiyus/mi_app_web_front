@@ -2,10 +2,83 @@
 @import "../../styles/config/fonts.scss";
 @import "../../styles/config/colors.scss";
 
+.contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
 
-.contacto{
+.box-correo {
+  width: 90%;
+  margin: 1.5em auto;
+  display: flex;
+  flex-direction: column;
+  
+  @include laptor {
+    width: 80%;
+  }
+
+  &__intro {
+    margin-bottom: 1em;
+  }
+
+  .form-correo {
     display: flex;
     flex-direction: column;
-    justify-content: space-between ;
-    height: 100vh;
+    margin-bottom: 1.7em;
+    border: 1px solid $text-color-ligth1;
+    border-radius: 2%;
+    padding: 1em;
+
+    &__item {
+      margin-bottom: 1em;
+
+      & h1,
+      p {
+        margin: 0;
+      }
+
+      & input {
+        width: 100%;
+        // border: none; 
+        border: 1px solid $text-color-ligth1;
+      }
+
+      & textarea {
+        width: 100%;
+        // min-width: 100%;
+        // border: none; 
+        border: 1px solid $text-color-ligth1;
+      }
+
+      &--spanerror {
+        color: red;
+
+      }
+
+      &--boxerror {
+        border-color: red;
+      }
+
+    }
+
+    
+    &__btn {
+      background-color: $text-color-ligth1;
+    }
+
+  }
 }
+
+.box-map {
+  width: 100%;
+  margin-bottom: 2.5em;
+}
+
+
+@include tablet {}
+
+@include laptor {}
+
+@include laptor {}

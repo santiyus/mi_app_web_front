@@ -1,9 +1,68 @@
 <div div class="contacto">
   <app-menu></app-menu>
 
-<section>
-  <p>contacto works!</p>
-</section>
+  <section>
 
-<app-footer></app-footer>
+    <div class="box-correo">
+      <div class="box-correo__intro">
+        <h1>{{text.textos.titulo}}</h1>
+        <p>{{text.textos.subtitulo}}</p>
+
+      </div>
+
+      <form class="form-correo" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-correo__item">
+          <p>{{text.textos.nombre}}</p>
+          <input type="text" formControlName="nombre">
+          <span class="form-correo__item--spanerror" *ngIf="form.get('nombre').hasError('required') && form.get('nombre').touched">{{text.errores.campoRequerido}}</span>
+          <span class="form-correo__item--spanerror" *ngIf="form.get('nombre').hasError('pattern') && form.get('nombre').touched">{{text.errores.max30}}</span>
+        </div>
+
+        <div class="form-correo__item">
+          <p>{{text.textos.email}}</p>
+          <input type="text" formControlName="email">
+          <span class="form-correo__item--spanerror" *ngIf="form.get('email').hasError('required') && form.get('email').touched">{{text.errores.campoRequerido}}</span>
+          <span class="form-correo__item--spanerror" *ngIf="form.get('email').hasError('pattern') && form.get('email').touched">{{text.errores.max70}}</span>
+          <span class="form-correo__item--spanerror" *ngIf="form.get('email').hasError('email') && form.get('email').touched">{{text.errores.correoError}}</span>
+        </div>
+
+        <div class="form-correo__item">
+          <p>{{text.textos.telefono}}</p>
+          <input type="number" formControlName="telefono">
+          <!-- <span class="form-correo__item--spanerror" *ngIf="form.get('telefono').hasError('required') && form.get('telefono').touched">{{text.errores.campoRequerido}}</span> -->
+          <span class="form-correo__item--spanerror" *ngIf="form.get('telefono').hasError('pattern') && form.get('telefono').touched">{{text.errores.telefonoError}}</span>
+        </div>
+
+        <div class="form-correo__item">
+          <p>{{text.textos.asunto}}</p>
+          <input type="text" formControlName="asunto">
+          <!-- <span class="form-correo__item--spanerror" *ngIf="form.get('asunto').hasError('required') && form.get('asunto').touched">{{text.errores.campoRequerido}}</span> -->
+          <span class="form-correo__item--spanerror" *ngIf="form.get('asunto').hasError('pattern') && form.get('asunto').touched">{{text.errores.max30}}</span>
+        </div>
+
+        <div class="form-correo__item">
+          <p>{{text.textos.mensaje}}</p>
+          <textarea  type="text" formControlName="mensaje" rows="5"></textarea>
+          <span class="form-correo__item--spanerror" *ngIf="form.get('mensaje').hasError('required') && form.get('mensaje').touched">{{text.errores.campoRequerido}}</span>
+          <span class="form-correo__item--spanerror" *ngIf="form.get('mensaje').hasError('pattern') && form.get('mensaje').touched">{{text.errores.max400}}</span>
+        </div>
+        
+        <div class="form-correo__item">
+          <button class= "btn form-correo__btn" type="submit">{{text.textos.enviar}}</button>
+        </div>
+      </form>
+
+    </div>
+
+
+    <div class="box-map">
+      <iframe width="100%" height="500"
+        src="https://maps.google.com/maps?width=100%&height=500&hl=es&q=plaza%20del%20pueblo%2C%20colmenar%20viejo%20+()&ie=UTF8&t=&z=15&iwloc=B&output=embed"
+        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a
+          href="https://www.mapsdirections.info/marcar-radio-circulo-mapa/"></a>
+      </iframe>
+    </div>
+  </section>
+
+  <app-footer></app-footer>
 </div>

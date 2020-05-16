@@ -1,0 +1,21 @@
+{
+    "textos": {
+        "titulo": "Contactame",
+        "subtitulo": "Enviame un correo y me pondré en contacto lo antes posible.",
+        "nombre": "Nombre*",
+        "email": "Email*",
+        "telefono": "Telefono",
+        "asunto": "Asunto",
+        "mensaje": "Mensaje (400 caracteres)*",
+        "enviar": "Enviar"
+    },
+    "errores": {
+        "campoRequerido": "*Campo obligatorio.",
+        "correoError": "*El formato del email es erróneo.",
+        "telefonoError": "*El formato del teléfono es erróneo.",
+        "max9": "*Máximo 9 caracteres. ",
+        "max30": "*Máximo 30 caracteres. ",
+        "max70": "*Máximo 70 caracteres. ",
+        "max400": "*Máximo 400 caracteres. "
+    }
+}
