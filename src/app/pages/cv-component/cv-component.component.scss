@@ -2,9 +2,109 @@
 @import "../../styles/config/fonts.scss";
 @import "../../styles/config/colors.scss";
 
-.cv-component{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between ;
-    height: 100vh;
+.cv-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.cabecera_img img {
+  width: 190px;
+  height: 238px;
+  margin: 1em 0;
+  display: flex;
+  border-radius: 100%;
+  padding: .9em;
+
+  @include laptor {
+    width: 205px;
+    height: 255px;
+  }
+}
+
+.cv {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+
+  @include laptor {
+    width: 80%;
+  }
+
+
+  &__item {
+    // width: 90%;
+    border: 1px solid $text-color-ligth1;
+    margin-bottom: 2em;
+    padding: .5em .5em .5em 0;
+    width: 100%;
+
+    @include desktop {
+      width: 80%;
+      padding: 1em;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  &__habilidades {
+    text-align: justify;
+
+    @include laptor {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+
+      & ul {
+        width: 50%;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__experiencia,
+  &__formacion {
+    text-align: justify;
+
+    @include desktop {
+      display: flex;
+      align-items: center;
+
+      & ul {
+        @include laptor {
+          width: 70%;
+        }
+      }
+    }
+  }
+
+  &__line {
+    width: 96%;
+    margin: auto;
+    border-top-color: $text-color-dark1;
+    border-width: 2px;
+    opacity: 0.5;
+  }
+}
+
+.cv__boxbtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+
+  &-btn {
+    background-color: $text-color-ligth1;
+  }
 }

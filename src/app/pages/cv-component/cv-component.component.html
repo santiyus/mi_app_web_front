@@ -1,8 +1,54 @@
 <div div class="cv-component">
   <app-menu></app-menu>
 
-  <section>
-    <p>cv-component works!</p>
+  <section class="cv">
+
+    <div class="cabecera_img">
+      <img src="{{text.rutasImg.logo.ruta}}" alt="">
+    </div>
+
+    <div class="cv__item">
+      <div class="cv__title">
+        <h4>{{text.habilidades_titulo}}</h4>
+        <hr class="cv__line">
+      </div>
+      <div class="cv__habilidades">
+        <ul *ngFor="let i of text.habilidades">
+          <li>{{i}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cv__item">
+      <div class="cv__title">
+        <h4>{{text.formacion_academica}}</h4>
+        <hr class="cv__line">
+      </div>
+      <div class="cv__formacion">
+        <ul *ngFor="let i of text.formacion">
+          <li>{{i.anios}}: <b>{{i.titulo}}</b> - {{i.lugar}}.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cv__item">
+      <div class="cv__title">
+        <h4>{{text.experiencia_pro}}</h4>
+        <hr class="cv__line">
+      </div>
+      <ul class="cv__experiencia" *ngFor="let i of text.experiencia">
+        <li><b>{{i.anio}}</b>: {{i.puesto}} </li>
+      </ul>
+    </div>
+
+    <div class="cv__boxbtn">
+      <p>{{text.parrafo_descarga}}</p>
+      <!-- <button class="btn cv__boxbtn-btn" type="submit">{{text.descargar}}</button> -->
+      <a class="btn cv__boxbtn-btn" href="{{text.cvpdf.ruta}}" download="{{text.cvpdf.nombre}}">
+        {{text.descargar}}
+        </a>
+    </div>
+
   </section>
 
   <app-footer></app-footer>

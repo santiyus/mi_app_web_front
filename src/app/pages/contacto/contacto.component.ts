@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import textos from './recursos/textos.json';
-import { FormGroup, FormControl, FormBuilder, Validators  } from '@angular/forms';
+import {FormBuilder, Validators  } from '@angular/forms';
 
 @Component({
   selector: 'app-contacto',

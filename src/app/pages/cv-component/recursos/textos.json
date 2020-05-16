@@ -1,0 +1,78 @@
+{
+    "nombre": "Santiago Simarro Lopez",
+    "email": "santiago.simarro.lopez@gmail.com",
+    "formacion_academica": "Formación academica",
+    "experiencia_pro": "Experiencia profesional",
+    "habilidades_titulo": "Habilidades",
+    "parrafo_descarga": "Descarga el curriculum en PDF",
+    "descargar": "Descargar",
+    "formacion": [
+        {
+            "anios": "2015-2017",
+            "titulo": "Técnico superior de desarrollo de aplicaciones multiplataforma ",
+            "lugar": "IES BARAJAS"
+        },
+        {
+            "anios": "2017",
+            "titulo": "Técnico Superior Deportivo en Fútbol (Entrenador nivel III)",
+            "lugar": "Centros FUTCOACH10"
+        },
+        {
+            "anios": "2011 - 2015",
+            "titulo": "Título de bachillerato de CCSS",
+            "lugar": "Cursado en el centro IES ROSA CHACEL"
+        }
+    ],
+    "experiencia": [
+        {
+            "anio": "2019(Sept.) – ACTUALIDAD",
+            "puesto": "Programador en la parte back con java y en base de datos con informix en Accelya."
+        },
+        {
+            "anio": "2018(agosto) - ACTUALIDAD",
+            "puesto": "Entrenador de fútbol, Categoría juvenil y cadete en 2019/2020, categoría senior (CERCEDA CF) y cadete en 2018/2019 del club DEPORTE Y PUNTO BMC."
+        },
+        {
+            "anio": "2018(Julio) – 2019(Sept.)",
+            "puesto": "Programador Front con JavaScript (ES6, Angular) y en la parte Back Java (Spring) en GFI."
+        },
+        {
+            "anio": "2017(Octubre)- 2018 (Julio)",
+            "puesto": "Programador Junior Front con Angular y Java en Ciber Experix."
+        },
+        {
+            "anio": "2013-2018(Febrero)",
+            "puesto": "Entrenador de fútbol, Categoría cadete en 2017/2018, infantil 2015/2016 y 2016/2017, y alevín en las 2013/2014 y 2014/2015, en la ESCUELA DE FÚTBOL SIETE PICOS COLMENAR."
+        },
+        {
+            "anio": "2017 (abril, mayo y junio)",
+            "puesto": "Practicas en la empresa ACENS."
+        },
+        {
+            "anio": "2015-2016",
+            "puesto": "Monitor de los campeonatos escolares de los I.E.S. de la comunidad de Madrid, categoría cadete del I.E.S. PINTOR ANTONIO LOPEZ (Tres cantos)."
+        },
+        {
+            "anio": "2009/2013",
+            "puesto": "Árbitro de fútbol 7, categoría pre benjamín, benjamín y alevín. Colaborando con la FEDERACIÓN DE FÚTBOL DE MADRID."
+        }
+    ],
+    "habilidades": [
+        "Actitud positiva e ilusión por crecer y mejorar.",
+        "Facilidad para relacionarse y comunicarse con las personas.",
+        "Gran capacidad para trabajar en equipo, liderazgo y decisión.",
+        "Experiencia en manejo de grupo.",
+        "Buena capacidad para organizar.",
+        "Rápida adaptabilidad al entorno."
+    ],
+    "rutasImg": {
+        "logo": {
+            "id": "img-logo",
+            "ruta": "favicon.png"
+        }
+    },
+    "cvpdf": {
+        "nombre": "CV - Santiago Simarro",
+        "ruta": "assets/pdf/cv.pdf"
+    }
+}
