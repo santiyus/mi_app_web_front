@@ -2,7 +2,41 @@
   <app-menu></app-menu>
 
   <section>
-    <p>crud-app works!</p>
+
+    <div class="crudapp">
+      <div class="crudapp__intro">
+        <h1>{{text.titulo}}</h1>
+        <!-- <p>{{text.intro}}</p>
+      <p>{{text.intro2}}</p>
+      <p>{{text.intro3}}</p> -->
+        <p>{{text.intro4}}</p>
+
+      </div>
+
+
+      <form class="form-crud" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+        <div class="form-crud__img">
+          <img src="{{text.rutasImg.login.ruta}}" alt="">
+        </div>
+        <div class="form-crud__item">
+          <p>{{text.usuario}}</p>
+          <input type="text" formControlName="user" maxlength="7">
+          <span class="form-crud__item--spanerror"
+            *ngIf="formLogin.get('user').hasError('required') && formLogin.get('user').touched">{{text.errorUser}}</span>
+        </div>
+        <div class="form-crud__item">
+          <p>{{text.contrasena}}</p>
+          <input type="text" formControlName="pass" maxlength="5">
+          <span class="form-crud__item--spanerror"
+            *ngIf="formLogin.get('pass').hasError('required') && formLogin.get('pass').touched">{{text.errorPass}}</span>
+        </div>
+
+        <div class="form-crud__item">
+          <button class="btn form-crud__btn" type="submit">{{text.entrar}}</button>
+        </div>
+      </form>
+
+    </div>
   </section>
 
   <app-footer></app-footer>

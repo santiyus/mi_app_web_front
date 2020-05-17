@@ -1,0 +1,24 @@
+{
+    "titulo": "Aplicación CRUD DE PRUEBA",
+    "intro": "En este apartado, podrás usar a modo de prueba una aplicación web en tiempo real. Esta está dividida en dos partes. La parte front, diseñado con las tecnologías HTML, CSS Y con el framework de javascript, ANGULAR 9. ",
+    "intro2": "Por otra lado, tenemos la parte back, que ha sido creada con el framework de java, SPRING-BOOT utilizando el componente de spring-security para la parte de seguridad. Para la conexión con la base de datos se ha utilizado hibernate, la base de datos está creada con la tecnología MySql.",
+    "intro3": "Para la comunicación entre el back y el front, se ha optado por usar el modelo de web services con el estándar JSON WEB TOKEN (jwt).",
+    "intro4": "Para poder logearte en la aplicación, el usuario es INVITADO y la contraseña es 12345. ",
+    "usuario": "Usuario",
+    "contrasena": "Contraseña",
+    "entrar": "Entrar",
+    "errorUser": "El usuario es: invitado",
+    "errorPass": "La contraseña es: 12345",
+    "crud": {
+        "": ""
+    },
+    "mostrar-tabla": {
+        "": ""
+    },
+    "rutasImg": {
+        "login": {
+            "id": "img-user",
+            "ruta": "assets/img/crud/user.png"
+        }
+    }
+}

@@ -25,6 +25,7 @@ import { LinkedinComponent } from './components/linkedin/linkedin.component';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CrudComponent } from './pages/crud-app/crud-components/crud/crud.component';
 
 
 
@@ -47,7 +48,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     MenuComponent,
     LinkedinComponent,
-    CarruselComponent
+    CarruselComponent,
+    CrudComponent
   ],
   imports: [
     BrowserModule,

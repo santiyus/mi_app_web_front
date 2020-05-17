@@ -3,9 +3,89 @@
 @import "../../styles/config/colors.scss";
 
 
-.crud-app{
+.crud-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.crudapp {
+  width: 90%;
+  margin: 1.5em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include laptor {
+    width: 70%;
+  }
+
+  &__intro{
+    text-align: center;
+  }
+
+}
+
+.form-crud {
+  display: flex;
+  flex-direction: column;
+  margin: 1.7em 0;
+  border: 1px solid $text-color-ligth1;
+  border-radius: 2%;
+  padding: 1.2em;
+  width: 100%;
+  align-items: center;
+
+  @include laptor {
+    width: 70%;
+  }
+  &__img {
+
+    display: flex;
+    align-items: center;
+
+    & img {
+      width: 180px;
+      height: 110px;
+      margin: auto;
+    }
+
+    @include laptor {
+      width: 205px;
+      height: 125px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 1em;
     display: flex;
     flex-direction: column;
-    justify-content: space-between ;
-    height: 100vh;
+
+    & h1,
+    p {
+      margin: 0;
+    }
+
+    & input {
+      // width: 80%;
+      border: 1px solid $text-color-ligth1;
+    }
+
+    &--spanerror {
+      color: red;
+
+    }
+
+    &--boxerror {
+      border-color: red;
+    }
+
+  }
+
+
+  &__btn {
+    background-color: $text-color-ligth1;
+  }
+
 }

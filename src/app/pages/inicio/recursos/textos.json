@@ -2,13 +2,13 @@
     "textos": {
         "descubre_mas": "Descubre más",
         "sobre_mi": "Sobre mí",
-        "sobre_mi_text": "Te ayudará a conocerme un poquito mejor. Te cuento sobre de mi día a día, mis aspiraciones, mis hobbies, y muchas más cosas.",
+        "sobre_mi_text": "Te ayudará a conocerme mucho mejor. Expondré mi día a día, mis aspiraciones, mis hobbies, y muchas cosas más.",
         "curriculum": "Curriculum Vitae",
-        "cv_text": "Encontrarás toda mi formación y carrera profesional, pudiendo visualizar y descargar mi curriculum vitae.",
+        "cv_text": "Aquí podrás descargar mi curriculum vitae, además de encontrar información adicional sobre mi carrera profesional.",
         "app_prueba": "Aplicación de prueba",
-        "app_text": "Podrás probar una aplicación web en tiempo real. Construida con las tecnologias angular, spring-boot, spring-security, JWT, Hibernate y MySql ",
+        "app_text": "Tendrás acceso exclusivo para probar una app web en tiempo real. Construida con las tecnologias angular, spring-boot, spring-security, JWT, Hibernate y MySql. ",
         "contacto": "Contacto",
-        "contacto_text": "Te permitirá ponerte en contacto conmigo, de manera que, me podras mandar un correo sin necesidad de salir de la página web."
+        "contacto_text": "Te permitirá ponerte en contacto conmigo por correo sin necesidad de salir de la página web."
     },
     "rutasImg": {
         "sobreMi": {
