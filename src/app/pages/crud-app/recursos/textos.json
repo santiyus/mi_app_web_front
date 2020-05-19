@@ -10,9 +10,25 @@
     "errorUser": "El usuario es: invitado",
     "errorPass": "La contraseña es: 12345",
     "crud": {
-        "": ""
+        "eligeOpcion": "Elija una opción.",
+        "cerrarSesion": "Cerrar sesión",
+        "buscar":"Buscar",
+        "buscarId":"Buscar por id.",
+        "buscarNombre":"Buscar por nombre.",
+        "msgBuscarId":"Intoduce el id del cliente que quiere buscar.",
+        "msgBuscarNombre":"Intoduce el nombre por el cual quiere filtrar.",
+        "insertar":"Insertar",
+        "msgInsertar":"Rellene todos los campos.",
+        "editar":"Editar",
+        "msg1Editar":"Introduce el id del cliente que quiere editar.",
+        "msg2Editar":"Modifique los campos que desee.",
+        "borrar":"Borrar",
+        "msgBorrar":"Introduce el id del cliente que quiere eliminar.",
+        "msgOk":"La operación se ha realizado con exito.",
+        "msgError":"Error, no se ha realizado la acción.",
+        "msgNoFound":"El dato introduccido no se encuentra."
     },
-    "mostrar-tabla": {
+    "tabla": {
         "": ""
     },
     "rutasImg": {

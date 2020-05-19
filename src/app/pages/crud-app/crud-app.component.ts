@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import textos from './recursos/textos.json';
 import {FormBuilder, Validators  } from '@angular/forms';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-crud-app',
@@ -14,7 +16,7 @@ export class CrudAppComponent implements OnInit {
     pass: ['', Validators.required, ]
   });
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder, private router:Router) { }
 
   ngOnInit(): void {
     this.text = textos
@@ -27,6 +29,7 @@ export class CrudAppComponent implements OnInit {
     if (this.formLogin.valid) {
       const value = this.formLogin.value;
       console.log(value);
+      this.router.navigate(['/app/crud']);
     } else {
       this.formLogin.markAllAsTouched();
     }
