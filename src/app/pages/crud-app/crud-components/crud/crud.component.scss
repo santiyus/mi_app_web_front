@@ -5,8 +5,12 @@
 .box-app-crud {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   background-color: $fondo-comun;
+
+  @include laptor {
+    height: 100vh;
+  }
 }
 
 .btn-cerrar-session {
@@ -221,6 +225,7 @@
 
 
 .box-tabla {
+  background-color: $fondo-comun;
   width: 100%;
   overflow-x:auto;
   margin: 1em 0 3em;
