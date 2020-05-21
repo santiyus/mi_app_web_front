@@ -7,7 +7,7 @@
     "usuario": "Usuario",
     "contrasena": "Contraseña",
     "entrar": "Entrar",
-    "errorUser": "El usuario es: invitado",
+    "errorUser": "El usuario es: user",
     "errorPass": "La contraseña es: 12345",
     "crud": {
         "intro":"La tabla que se encuentra debajo, corresponde a los datos que actualmente existen en la base de datos. Haciendo click en el menú de arriba, podrás buscar, insertar nuevos, editar los ya existentes y también podrás borrarlos. Para llevar a cabo estas acciones, rellena el formulario correspondiente.",

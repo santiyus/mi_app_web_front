@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import textos from './recursos/textos.json';
-import {FormBuilder, Validators  } from '@angular/forms';
-import {Router} from '@angular/router';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { HttpCrudService } from './services/http-crud-service.service'
 
 
 @Component({
@@ -11,21 +12,28 @@ import {Router} from '@angular/router';
 })
 export class CrudAppComponent implements OnInit {
   text;
-  spinner=false
+  spinner = false
   formLogin = this.fb.group({
     user: ['', Validators.required],
-    pass: ['', Validators.required, ]
+    pass: ['', Validators.required,]
   });
 
-  constructor(private fb:FormBuilder, private router:Router) { }
+  constructor(private fb: FormBuilder, private router: Router, private _httpService: HttpCrudService) { }
 
   ngOnInit(): void {
     this.text = textos
   }
-  
+
   onSubmit() {
     console.log(this.formLogin)
-    console.log(this.formLogin.get('email'))
+    const obje={
+      "user":"userr",
+      "pass":"12345"	
+    }
+    
+    this._httpService.generarToken(obje)
+
+    // console.log(this._httpService.)
 
     if (this.formLogin.valid) {
       const value = this.formLogin.value;
