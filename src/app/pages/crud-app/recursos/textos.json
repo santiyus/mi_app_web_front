@@ -10,6 +10,7 @@
     "errorUser": "El usuario es: invitado",
     "errorPass": "La contraseña es: 12345",
     "crud": {
+        "intro":"La tabla que se encuentra debajo, corresponde a los datos que actualmente existen en la base de datos. Haciendo click en el menú de arriba, podrás buscar, insertar nuevos, editar los ya existentes y también podrás borrarlos. Para llevar a cabo estas acciones, rellena el formulario correspondiente.",
         "eligeOpcion": "Elija una opción.",
         "cerrarSesion": "Cerrar sesión",
         "buscar":"Buscar",
@@ -30,6 +31,7 @@
         "apellidos":"Apellidos",
         "tlfn":"Teléfono",
         "email":"Email",
+        "msgValid":"Se ha realizado con exito.",
         "msgError":"Error, no se ha realizado la acción.",
         "msgNoFound":"El dato introduccido no se encuentra.",
         "msgErrorFormFormat":"El formato es erróneo.",
@@ -40,10 +42,8 @@
             {"titulo":"Apellidos", "name":"apellidos"},
             {"titulo":"Email", "name":"email"},
             {"titulo":"Teléfono", "name":"telefono"}
-        ]
-    },
-    "tabla": {
-        "": ""
+        ],
+        "tablaName": "Tabla"
     },
     "rutasImg": {
         "login": {

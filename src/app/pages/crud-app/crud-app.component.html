@@ -1,4 +1,8 @@
-<div div class="crud-app">
+
+<div *ngIf="spinner">
+  <app-spinner> </app-spinner>
+</div>
+<div div class="crud-app"  *ngIf="!spinner">
   <app-menu></app-menu>
 
   <section>

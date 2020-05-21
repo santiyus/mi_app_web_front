@@ -11,9 +11,10 @@ import { Router } from '@angular/router';
 export class CrudComponent implements OnInit {
   token
   text
-  radioSelect = 3
+  radioSelect = 1
   radioBuscar = 'id'
   disableInsert = true
+  spinner = false
 
   errorGlobal = ''
   resptBuscar = '';
@@ -23,6 +24,7 @@ export class CrudComponent implements OnInit {
   columnas = []
 
   //mensajes de error
+  validGlobal = false
   msgError = 'error'
   msgNoFound = 'error-no-found'
 
@@ -79,17 +81,19 @@ export class CrudComponent implements OnInit {
     console.log(this.formBuscar)
 
     if (this.formBuscar.valid) {
-      const value = this.formBuscar.value;
-      console.log(value);
+      // const value = this.formBuscar.value;
+      // console.log(value);
+        console.log('saca el radio ' + this.radioSelect)
 
-      if ( this.radioSelect === 1) { 
+      if ( this.radioSelect == 1) { 
         console.log('buscar')
 
-      } else if ( this.radioSelect === 3){
+      } else if ( this.radioSelect == 3){
         this.enabledInsert()
         console.log('editar --> ' +this.disableInsert)
       }
     } else {
+      console.log('mal')
       this.disabledInsert()
       this.formBuscar.markAllAsTouched();
     }
@@ -152,6 +156,7 @@ export class CrudComponent implements OnInit {
   }
 
   private limpiarErrores() {
+    this.validGlobal = false
     this.errorGlobal = ''
   }
 

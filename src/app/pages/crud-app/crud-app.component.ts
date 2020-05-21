@@ -11,6 +11,7 @@ import {Router} from '@angular/router';
 })
 export class CrudAppComponent implements OnInit {
   text;
+  spinner=false
   formLogin = this.fb.group({
     user: ['', Validators.required],
     pass: ['', Validators.required, ]

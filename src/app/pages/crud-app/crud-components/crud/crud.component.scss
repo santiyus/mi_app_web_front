@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-color: $fondo-comun;
 }
 
 .btn-cerrar-session {
@@ -118,6 +119,11 @@
     width: 70%;
   }
 
+  &__intro{
+    margin-bottom: 1em;
+    text-align: justify;
+  }
+
 
   &__item {
     display: flex;
@@ -134,17 +140,12 @@
 
   }
 
-
   &__cruadro {
     margin-bottom: 1.7em;
     border: 1px solid $text-color-ligth1;
     border-radius: 2%;
     padding: 1em;
   }
-
-  &-editar {}
-
-  &-borrar {}
 
   &__input {
     @include tablet {
@@ -165,23 +166,6 @@
 .btn-crud {
   background-color: $text-color-ligth1;
   margin: .6em 0;
-}
-
-.tabla {
-  & __scroll {
-    // width: 100%;
-    // overflow-x: auto;
-
-    @include mobile {
-      display: block;
-      overflow-x: auto;
-    }
-  }
-
-  & .tbody {
-    width: 100%;
-    overflow-x: auto;
-  }
 }
 
 
@@ -213,6 +197,10 @@
       border: 1px solid $text-color-ligth1;
     }
 
+    &--valid {
+      color: green;
+    }
+
     &--spanerror {
       color: red;
     }
@@ -228,4 +216,12 @@
     background-color: $text-color-ligth1;
   }
 
+}
+
+
+
+.box-tabla {
+  width: 100%;
+  overflow-x:auto;
+  margin: 1em 0 3em;
 }
