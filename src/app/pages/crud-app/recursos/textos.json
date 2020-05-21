@@ -20,13 +20,27 @@
         "insertar":"Insertar",
         "msgInsertar":"Rellene todos los campos.",
         "editar":"Editar",
+        "cargar":"Cargar",
         "msg1Editar":"Introduce el id del cliente que quiere editar.",
         "msg2Editar":"Modifique los campos que desee.",
         "borrar":"Borrar",
         "msgBorrar":"Introduce el id del cliente que quiere eliminar.",
         "msgOk":"La operación se ha realizado con exito.",
+        "nombre":"Nombre",
+        "apellidos":"Apellidos",
+        "tlfn":"Teléfono",
+        "email":"Email",
         "msgError":"Error, no se ha realizado la acción.",
-        "msgNoFound":"El dato introduccido no se encuentra."
+        "msgNoFound":"El dato introduccido no se encuentra.",
+        "msgErrorFormFormat":"El formato es erróneo.",
+        "msgErrorFormRequired":"Campo obligatorio.",
+        "tabla":[
+            {"titulo":"Id", "name":"id"},
+            {"titulo":"Nombre", "name":"nombre"},
+            {"titulo":"Apellidos", "name":"apellidos"},
+            {"titulo":"Email", "name":"email"},
+            {"titulo":"Teléfono", "name":"telefono"}
+        ]
     },
     "tabla": {
         "": ""
