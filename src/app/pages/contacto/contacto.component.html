@@ -1,4 +1,7 @@
-<div div class="contacto">
+<div *ngIf="spinner">
+  <app-spinner> </app-spinner>
+</div>
+<div div class="contacto" *ngIf="!spinner">
   <app-menu></app-menu>
 
   <section class="section-correo">
@@ -10,7 +13,8 @@
 
       </div>
 
-      <form class="form-correo" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <form class="form-correo" [formGroup]="form" (ngSubmit)="onSubmitTemporal()">
+      <!-- <form class="form-correo" [formGroup]="form" (ngSubmit)="onSubmit()"> -->
         <div class="form-correo__item">
           <p>{{text.textos.nombre}}</p>
           <input type="text" formControlName="nombre" maxlength="30">
@@ -51,6 +55,9 @@
         <div class="form-correo__item">
           <button class="btn form-correo__btn" type="submit">{{text.textos.enviar}}</button>
         </div>
+        <span class="form-correo__item--valid" *ngIf="okEmail">{{text.errores.okEmail}}</span>
+        <span class="form-correo__item--spanerror" *ngIf="koEmail">{{text.errores.koEmail}}</span>
+        <span class="form-correo__item--spanerror" *ngIf="noEmail">{{text.errores.noEmail}}</span>
       </form>
 
     </div>

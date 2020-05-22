@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import textos from './recursos/textos.json';
-import {FormBuilder, Validators  } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { Correo } from './model/correo'
 
 @Component({
   selector: 'app-contacto',
@@ -9,6 +11,11 @@ import {FormBuilder, Validators  } from '@angular/forms';
 })
 export class ContactoComponent implements OnInit {
   text;
+  url = ''
+  spinner = false
+  okEmail = false
+  koEmail = false
+  noEmail = false
   expRegEmail = '(?(?:^\w+\.?[-+\w]*@\w+(?:[-.]\w+)*\.[a-zA-Z]{2,}$)^.{6,80}$|^\w+\.?[-+\w]*@\w+(?:[-.]\w+)*\.[a-zA-Z]{2,}$)'
   form = this.fb.group({
     nombre: ['', Validators.required],
@@ -18,19 +25,34 @@ export class ContactoComponent implements OnInit {
     mensaje: ['', Validators.required]
   });
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb: FormBuilder, private http: HttpClient) { }
 
   ngOnInit(): void {
     this.text = textos
   }
 
-  onSubmit() {
-    console.log(this.form)
-    console.log(this.form.get('email'))
 
+  onSubmitTemporal() {
+    this.noEmail = true
+  }
+
+  onSubmit() {
     if (this.form.valid) {
       const value = this.form.value;
-      console.log(value);
+      const correo = new Correo(value.nombre, value.email, value.telefono, value.asunto, value.mensaje)
+      this.http.post(this.url + '/crud/borrar_cliente/', correo)
+        .subscribe(
+          data => {
+            data ? this.okEmail = true : this.koEmail = true
+            this.form.reset()
+            this.spinner = false
+          },
+          error => {
+            this.koEmail = true
+            this.spinner = false
+          }
+        )
+
     } else {
       this.form.markAllAsTouched();
     }

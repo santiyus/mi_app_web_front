@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import {ICliente} from '../interfaces/ICliente'
-import {IUsuario} from '../interfaces/iusuario'
+import { HttpClient} from '@angular/common/http';
+import { ICliente } from '../interfaces/ICliente'
 import { Cliente } from '../model/cliente';
 import { Usuario } from '../model/usuario';
 
@@ -19,44 +18,69 @@ export class HttpCrudService {
     return this.token
   }
 
-  private setToken(pToken: string): void {
+  setToken(pToken): void {
     this.token = pToken
   }
 
   //Obtener token
-  generarToken(pUser: Usuario): void {
-    this.http.post(this.url + '/autenticarse', pUser)
+  generarToken(pUser: Usuario) {
+    return this.http.post(this.url + '/autenticarse', pUser, { responseType: 'text' })
   }
 
 
   //Obtener todos los clientes
   getAllClients() {
-    return this.http.get(this.url + '/crud/all_clientes')
+    const headers = {
+      responseType: 'json',
+      'token': this.getToken()
+    }
+    return this.http.get(this.url + '/crud/all_clientes', { headers })
   }
 
   //Obtener cliente por id
   getClientId(pId: number) {
-    return this.http.get<ICliente>(this.url + '/crud/cliente_id/'+pId)
+    const headers = {
+      responseType: 'json',
+      'token': this.getToken()
+    }
+    return this.http.get<ICliente>(this.url + '/crud/cliente_id/' + pId, { headers })
   }
 
   //Obtener cliente por nombre
   getClientName(pName: string) {
-    return this.http.get<ICliente>(this.url + '/crud/cliente_nombre/'+pName)
+    const headers = {
+      responseType: 'json',
+      'token': this.getToken()
+    }
+    return this.http.get<ICliente[]>(this.url + '/crud/cliente_nombre/' + pName, { headers })
   }
-  
+
   //Crear Cliente
-  putNewClient(pCliente: Cliente) {
-    return this.http.put(this.url + '/crud/crear_cliente', pCliente)
+  putNewClient(pCliente) {
+    const headers = {
+      responseType: 'text',
+      'token': this.getToken()
+    }
+    return this.http.put(this.url + '/crud/crear_cliente', pCliente, { headers })
   }
 
   //Editar Cliente
   putEditClient(pCliente: Cliente) {
-    return this.http.post(this.url + '/crud/actualizar_cliente', pCliente)
+    const headers = {
+      responseType: 'text',
+      'token': this.getToken()
+    }
+    return this.http.post(this.url + '/crud/actualizar_cliente', pCliente, { headers })
   }
 
   //Eliminar Cliente
   deleteClient(pId: number) {
-    return this.http.delete(this.url + '/crud/borrar_cliente/'+ pId)
+    const headers = {
+      responseType: 'text',
+      'token': this.getToken()
+    }
+    return this.http.delete(this.url + '/crud/borrar_cliente/' + pId, { headers })
   }
+
 
 }

@@ -3,7 +3,7 @@
 </div>
 <div class="box-app-crud" *ngIf="!spinner">
   <div class="btn-cerrar-session">
-    <a href="" class="btn-cerrar-session__item">cerrar sesión</a>
+    <a [routerLink]="['/app']" (click)="cerrarSesion()" class="btn-cerrar-session__item">cerrar sesión</a>
   </div>
 
   <div class="boxopt">
@@ -71,16 +71,16 @@
                 <input type="text" formControlName="resp" maxlength="10">
                 <span class="form-crud__item--spanerror"
                   *ngIf="formBuscar.get('resp').hasError('required') && formBuscar.get('resp').touched">{{text.crud.msgErrorFormRequired}}</span>
+                  <span class="form-crud__item--spanerror"
+              *ngIf="radioBuscar == 'id' && msgErrorFormat">{{text.crud.msgErrorFormFormat}}</span>
               </div>
               <div class="form-crud__item">
                 <button class="btn form-crud__btn" type="submit">{{text.crud.buscar}}</button>
               </div>
-              <span class="crud--valid" *ngIf="validGlobal">{{text.crud.msgValid}}</span>
-              <span class="crud--error" *ngIf="errorGlobal==msgError">{{text.crud.msgError}}</span>
-              <span class="crud--error" *ngIf="errorGlobal==msgNoFound">{{text.crud.msgNoFound}}</span>
+              <!-- <span class="crud--valid" *ngIf="validGlobal">{{text.crud.msgValid}}</span> -->
+              <span class="crud--error" *ngIf="msgError">{{text.crud.msgError}}</span>
+              <span class="crud--error" *ngIf="msgNoFound">{{text.crud.msgNoFound}}</span>
             </form>
-            <span class="crud--error" *ngIf="errorGlobal==msgError">{{text.crud.msgError}}</span>
-            <span class="crud--error" *ngIf="errorGlobal==msgNoFound">{{text.crud.msgNoFound}}</span>
           </div>
         </div>
       </div>
@@ -126,8 +126,8 @@
             <button class="btn form-crud__btn" type="submit">{{text.crud.insertar}}</button>
           </div>
           <span class="crud--valid" *ngIf="validGlobal">{{text.crud.msgValid}}</span>
-          <span class="crud--error" *ngIf="errorGlobal==msgError">{{text.crud.msgError}}</span>
-          <span class="crud--error" *ngIf="errorGlobal==msgNoFound">{{text.crud.msgNoFound}}</span>
+          <span class="crud--error" *ngIf="msgError">{{text.crud.msgError}}</span>
+          <span class="crud--error" *ngIf="msgNoFound">{{text.crud.msgNoFound}}</span>
         </form>
 
       </div>
@@ -140,6 +140,8 @@
               <p>{{text.crud.msg1Editar}}</p>
               <input type="text" formControlName="resp" maxlength="10" (change)="disabledInsert()">
               <span class="form-crud__item--spanerror"
+              *ngIf="msgErrorFormat">{{text.crud.msgErrorFormFormat}}</span>
+              <span class="form-crud__item--spanerror"
                 *ngIf="formBuscar.get('resp').hasError('required') && formBuscar.get('resp').touched">{{text.crud.msgErrorFormRequired}}</span>
             </div>
             <div class="form-crud__item">
@@ -147,7 +149,7 @@
             </div>
           </form>
 
-          <form class="form-crud" [formGroup]="formEditar" (ngSubmit)="onSubmitInsert()">
+          <form class="form-crud" [formGroup]="formEditar" (ngSubmit)="onSubmitEditar()">
             <div class="form-crud__item">
               <p>{{text.crud.nombre}}</p>
               <input type="text" formControlName="nombre" maxlength="10">
@@ -182,11 +184,11 @@
 
             <div class="form-crud__item">
               <button class="btn form-crud__btn" type="submit"
-                *ngIf="disableInsert == false">{{text.crud.insertar}}</button>
+                *ngIf="!disableInsert">{{text.crud.insertar}}</button>
             </div>
             <span class="crud--valid" *ngIf="validGlobal">{{text.crud.msgValid}}</span>
-            <span class="crud--error" *ngIf="errorGlobal==msgError">{{text.crud.msgError}}</span>
-            <span class="crud--error" *ngIf="errorGlobal==msgNoFound">{{text.crud.msgNoFound}}</span>
+            <span class="crud--error" *ngIf="msgError">{{text.crud.msgError}}</span>
+            <span class="crud--error"  *ngIf="msgNoFound">{{text.crud.msgNoFound}}</span>
           </form>
 
 
@@ -202,6 +204,7 @@
             <div class="form-crud__item">
               <p>{{text.crud.msgBorrar}}</p>
               <input type="text" formControlName="id" maxlength="10">
+              <span class="form-crud__item--spanerror" *ngIf="msgErrorFormat">{{text.crud.msgErrorFormFormat}}</span>
               <span class="form-crud__item--spanerror"
                 *ngIf="formBorrar.get('id').hasError('required') && formBorrar.get('id').touched">{{text.crud.msgErrorFormRequired}}</span>
             </div>
@@ -209,8 +212,8 @@
               <button class="btn form-crud__btn" type="submit">{{text.crud.borrar}}</button>
             </div>
             <span class="crud--valid" *ngIf="validGlobal">{{text.crud.msgValid}}</span>
-            <span class="crud--error" *ngIf="errorGlobal==msgError">{{text.crud.msgError}}</span>
-            <span class="crud--error" *ngIf="errorGlobal==msgNoFound">{{text.crud.msgNoFound}}</span>
+            <span class="crud--error" *ngIf="msgError">{{text.crud.msgError}}</span>
+            <span class="crud--error"  *ngIf="msgNoFound">{{text.crud.msgNoFound}}</span>
           </form>
         </div>
 
@@ -219,6 +222,8 @@
 
     <div class="box-tabla">
       <h3>{{text.crud.tablaName}}</h3>
+      <!-- <p *ngIf="listRow.length <= 0">{{text.crud.msgTablaVacia}}</p> -->
+      <span class="crud--error" *ngIf="!validTable">{{text.crud.msgErrorTabla}}</span>
       <table class="table crud__cruadro">
         <thead>
           <tr>
@@ -226,30 +231,19 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mars</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
+          <tr *ngFor="let client of listRow">
+            <th scope="row">{{client.id}}</th>
+            <td>{{client.nombre}}</td>
+            <td>{{client.apellidos}}</td>
+            <td>{{client.email}}</td>
+            <td>{{client.n_telefono}}</td>
           </tr>
         </tbody>
       </table>
 
+      <div class="form-crud__item">
+        <button class="btn form-crud__btn" type="button" (click)="actualizarTabla()">{{text.crud.updateTabla}}</button>
+      </div>
     </div>
   </div>
   <app-footer></app-footer>

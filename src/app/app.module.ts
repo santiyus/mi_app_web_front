@@ -21,7 +21,6 @@ import { LinkedinComponent } from './components/linkedin/linkedin.component';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MostrarTablaComponent } from './pages/crud-app/crud-components/mostrar-tabla/mostrar-tabla.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 
 
@@ -41,7 +40,6 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     LinkedinComponent,
     CarruselComponent,
     CrudComponent,
-    MostrarTablaComponent,
     SpinnerComponent
   ],
   imports: [

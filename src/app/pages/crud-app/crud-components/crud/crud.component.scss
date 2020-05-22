@@ -164,6 +164,10 @@
   &--error {
     color: red;
   }
+  
+  &--valid {
+    color: green;
+  }
 
 }
 
@@ -201,9 +205,6 @@
       border: 1px solid $text-color-ligth1;
     }
 
-    &--valid {
-      color: green;
-    }
 
     &--spanerror {
       color: red;

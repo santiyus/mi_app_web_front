@@ -10,6 +10,9 @@
         "enviar": "Enviar"
     },
     "errores": {
+        "okEmail": "Email enviado correctamente.",
+        "koEmail": "No se ha podido enviar el email.",
+        "noEmail": "Ahora mismo no esta disponible este servicio, puede ponerse en contacto escribiendo a santiago.simarro.lopez@gmail.com",
         "campoRequerido": "*Campo obligatorio.",
         "correoError": "*El formato del email es erróneo.",
         "telefonoError": "*El formato del teléfono es erróneo.",

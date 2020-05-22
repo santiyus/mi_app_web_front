@@ -75,7 +75,8 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "MiAppWebFront:build:production"
+              "browserTarget": "MiAppWebFront:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             }
           }
         },
